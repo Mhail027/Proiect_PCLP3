@@ -1,34 +1,45 @@
-import data_set as ds
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 
 print("*********** TASK 2 ***********")
 
 # Read the data set.
-list = ds.read_data("../titanic/train.csv")
-list = ds.eliminate_duplicates(list)
+df = pd.read_csv("../titanic/train.csv")
 
-# Do a graphic using the information from  the column
-# "Survived".
-survivors = ds.extract_column(list, "Survived")
-surv_options = ds.eliminate_duplicates(survivors)
-surv_counter = ds.count_aparitions(survivors, surv_options)
-if surv_options[0] == 0:
-	surv_options[0] = "survivors"
-	surv_options[1] = "deads"
-else:
-	surv_options[1] = "survivors"
-	surv_options[0] = "deads"
-ds.print_graphic_with_percenteges(surv_options, surv_counter, "Survived?")
+# Process the column "Survived".
+surv = df["Survived"]
+surv_options = set(surv)
+surv_counters = np.full(len(surv_options), 0)
+for elem in surv:
+	surv_counters[elem] += 1
 
-# Do a graphic using the information from  the column
-# "Survived".
-pclass = ds.extract_column(list, "Pclass")
-class_options = ds.eliminate_duplicates(pclass)
-class_counter = ds.count_aparitions(pclass, class_options)
-ds.print_graphic_with_percenteges(class_options, class_counter, "Classes")
+# Process the column "Pclass".
+pclass = df["Pclass"]
+pclass_options = set(pclass)
+pclass_counters = np.full(len(pclass_options) + 1, 0)
+for elem in pclass:
+	pclass_counters[elem] += 1
 
-# Do a graphic using the information from  the column
-# "Sex".
-sex = ds.extract_column(list, "Sex")
-sex_options = ds.eliminate_duplicates(sex)
-sex_counter = ds.count_aparitions(sex, sex_options)
-ds.print_graphic_with_percenteges(sex_options, sex_counter, "Sex")
+# Process the column "Sex".
+sex = df["Sex"]
+sex_options = set(sex)
+sex_counters = np.full(len(sex_options), 0)
+for elem in sex:
+	if elem == "male":
+		sex_counters[0] += 1
+	else:
+		sex_counters[1] += 1
+
+# Create a graphic with the processed columns.
+fig, (surv_graphic, pclass_graphic, sex_graphic) = plt.subplots(1, 3)
+
+surv_graphic.pie(surv_counters, labels = surv_options, autopct = '%1.1f%%')
+surv_graphic.set_title("Survived")
+pclass_graphic.pie(pclass_counters[1:4], labels = pclass_options,
+				   autopct = '%1.1f%%')
+pclass_graphic.set_title("Pclass")
+sex_graphic.pie(sex_counters, labels = sex_options, autopct = '%1.1f%%')
+sex_graphic.set_title("Sex")
+
+plt.show()
