@@ -46,7 +46,7 @@ print(f"[21, 41) years: {survs[1]}")
 print(f"[41, 61) years: {survs[2]}")
 print(f">= 61 years: {survs[3]}")
 
-# Do a graphic with the procents of amle which survived and died
+# Do a graphic with the procents of male which survived and died
 # from every category of age
 # Create a graphic with the processed columns.
 fig, (pies) = plt.subplots(2, 2)
