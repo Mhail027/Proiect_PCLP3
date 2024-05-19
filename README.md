@@ -85,3 +85,7 @@ and count the number of worng and right pairs / titles. We plot the results.
 
 ***J. TASK 10***
 
+Take first 100 persons from the dataset and do a graphic with the columns: <br>
+"Survived", "Pclass" and "Fare". The purpose of this graphic is to analyze <br>
+how the class and the fare influnenced the life of the persons.
+
