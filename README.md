@@ -30,11 +30,11 @@ Find the number of missing values from every column. For every column which <br>
 has holes, is printed on the screen how many they are and the percentage of <br>
 holes from all values which should be. <br>
 After, find the numbers of characteristics / values which are missing for the <br>
-persons which survived, respectively for the people that died. On te screen, <br>
+persons which survived, respectively for the people that died. On the screen, <br>
 we print the percetage of missing values from all values which should be <br>
 for every class from the category "Survived". <br>
 
-***F. TASK 6***
+***E. TASK 5***
 
 Create a list which conatins the category of age for every person. The categories <br>
 of age are:
@@ -54,3 +54,34 @@ and died in every category of age. Print the number of male survivors on screen,
 for every category, and make a graphic with this informations.
 
 ***G. TASK 7***
+
+Find the number of children (< 18 years) and adults which survived and died.  <br>
+Calculate the percentege of children from the ship and print the result on <br>
+screen. After, we do a graphic of type pie which conatins the informations <br>
+about the adults and their existence after Titanic. We do, the same thing <br>
+for children.
+
+***H. TASK 8***
+
+We fill up the holes from the dataframe. We have 3 columns with missing <br>
+values: "Age", "Cabin", "Embarked". <br>
+
+Age - We caclulte the medium age for a survivor and for a person who died. <br>
+If a person survived, but we don't know his age, we put the medium age of <br>
+a survivor. The same thing is done and for a person who died, but have <br>
+hasn't the age known.
+
+Cabin, Embarked - Because these columns have string values, we must work <br>
+a little differently . For every column, firstly we determinate the most <br>
+frequent option of survivors and fill the survivors's holes from the collum. <br>
+Secondly, we do the same thing for the person which, unfortunately, died. 
+
+***I. TASK 9***
+
+Split the column "Name" to do a column with the titles of the people. We do <br>
+3 lists: one with the titles for men, another with the titles for women, and the <br>
+last with the neutral titles. We go throught the column of "Title" and "Sex" <br>
+and count the number of worng and right pairs / titles. We plot the results.
+
+***J. TASK 10***
+
