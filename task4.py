@@ -6,7 +6,7 @@ import math
 print("*********** TASK 4 ***********")
 
 # Read the data set.
-df = pd.read_csv("../titanic/train.csv")
+df = pd.read_csv("train.csv")
 
 # Find the columns with holes.
 columns = df.columns

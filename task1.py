@@ -4,7 +4,7 @@ import pandas as pd
 print("*********** TASK 1 ***********")
 
 # Read the data set.
-df = pd.read_csv("../titanic/train.csv")
+df = pd.read_csv("train.csv")
 
 # Find the number of lines and of columns.
 [nr_lines, nr_cols] = df.shape

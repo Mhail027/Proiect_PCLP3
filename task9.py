@@ -6,7 +6,7 @@ import math
 print("*********** TASK 9 ***********")
 
 # Read the data set.
-df = pd.read_csv("../titanic/train.csv")
+df = pd.read_csv("train.csv")
 
 # Create a column with the title of persons.
 df[['Surname', 'First name']]= df["Name"].str.split(',', expand = True)

@@ -5,7 +5,7 @@ import pandas as pd
 print("*********** TASK 2 ***********")
 
 # Read the data set.
-df = pd.read_csv("../titanic/train.csv")
+df = pd.read_csv("train.csv")
 
 # Process the column "Survived".
 surv = df["Survived"]

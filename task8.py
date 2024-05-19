@@ -6,7 +6,7 @@ import math
 print("*********** TASK 8 ***********")
 
 # Read the data set.
-df = pd.read_csv("../titanic/train.csv")
+df = pd.read_csv("train.csv")
 
 # Find the medium age for survivors and deads.
 survs_added_age = 0

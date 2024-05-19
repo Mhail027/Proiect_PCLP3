@@ -6,7 +6,7 @@ import math
 print("*********** TASK 7 ***********")
 
 # Read the data set.
-df = pd.read_csv("../titanic/train.csv")
+df = pd.read_csv("train.csv")
 
 # Find the number of children and adults
 # which survived and died in every.
