@@ -18,7 +18,7 @@ for title in df.head(0):
 fig, (cols) = plt.subplots(1, cnt)
 num_col_index = 0
 for title in df.head(0):
-	# Verifi if the column is numerical.
+	# Verify if the column is numerical.
 	type = df.dtypes[title]
 	if type != "int64" and type != "float64":
 		continue
