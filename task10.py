@@ -5,7 +5,7 @@ import seaborn as sb
 print("*********** TASK 10 ***********")
 
 # Read the data set.
-df = pd.read_csv("../titanic/train.csv")
+df = pd.read_csv("train.csv")
 
 # Select first 100 persons.
 df = df.head(100)

@@ -6,7 +6,7 @@ import math
 print("**** TASK 5 ****")
 
 # Read the data set.
-df = pd.read_csv("../titanic/train.csv")
+df = pd.read_csv("train.csv")
 
 # Create the list for the new column.
 # (Category of age)

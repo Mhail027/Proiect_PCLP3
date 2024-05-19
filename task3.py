@@ -5,7 +5,7 @@ import pandas as pd
 print("*********** TASK 3 ***********")
 
 # Read the data set.
-df = pd.read_csv("../titanic/train.csv")
+df = pd.read_csv("train.csv")
 
 # Find the numbers of columns with numbers.
 cnt = 0
