@@ -83,3 +83,6 @@ for i in range(0, 2):
 				df.loc[i, curr_col_title] = top
 			if ctg.equals(deads) and df["Survived"][i] == 0:
 				df.loc[i, curr_col_title] = top
+
+# Save the ney dataframe.
+df.to_csv("train_afetr_task_8.csv", index = "False")
