@@ -6,25 +6,7 @@ import math
 print("**** TASK 6 ****")
 
 # Read the data set.
-df = pd.read_csv("train.csv")
-
-# Create the list for the column:
-# "Category of age"
-idxs = [] 
-for age in df["Age"]:
-	if np.isnan(age):
-		idxs.append(np.nan)
-		continue
-	if 0 <= age and age < 21:
-		idxs.append(0)
-	if 21 <= age and age < 41:
-		idxs.append(1)
-	if 41 <= age and age < 61:
-		idxs.append(2)
-	if age >= 61:
-		idxs.append(3)
-# Add the column.
-df.insert(12, "Category of age", idxs)
+df = pd.read_csv("train_after_task_5.csv")
 
 # Find the number of men which survived
 # and in every category of age.
