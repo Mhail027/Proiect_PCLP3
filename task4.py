@@ -32,6 +32,8 @@ survivors = df.loc[df["Survived"] == 1]
 holes_list = survivors.isnull().sum().tolist()
 holes_surv = sum(holes_list)
 
+# Find the percentage of missing values for the 2 classes
+# from the column "Survived".
 [lines, cols] = deads.shape
 pct = holes_deads / (lines * cols)
 pct = math.floor(pct * 100) / 100

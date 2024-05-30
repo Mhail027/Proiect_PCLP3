@@ -16,7 +16,7 @@ for age in df["Age"]:
 		idxs.append(np.nan)
 		continue
 	if 0 <= age and age < 21:
-		idxs.append((int)0)
+		idxs.append(0)
 	if 21 <= age and age < 41:
 		idxs.append(1)
 	if 41 <= age and age < 61:
@@ -43,4 +43,4 @@ plt.ylabel("Persons")
 plt.show()
 
 # Save the ney dataframe.
-df.to_csv("train_afetr_task_5.csv", index = "False")
+df.to_csv("train_after_task_5.csv", index = "False")
