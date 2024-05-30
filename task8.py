@@ -85,4 +85,4 @@ for i in range(0, 2):
 				df.loc[i, curr_col_title] = top
 
 # Save the ney dataframe.
-df.to_csv("train_afetr_task_8.csv", index = "False")
+df.to_csv("train_after_task_8.csv", index = "False")
